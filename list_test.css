@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+body {
+    font-family: 'Alata', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#menu{
+    font-family: 'Alata', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+}
+
+#logo {
+    padding-top: 10px;
+    display:flex ;
+}
+
+a {
+    text-decoration: none;
+    color: #44ABF8;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin-right: 20px ;
+    font-size: 20px;
+}
+
+#toggle{
+    visibility: hidden;
+}
+
+
+.current_board{
+    height: 30px;
+    width: 170px;
+    background-color: #381DFC;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: white;
+    margin-left: 35px;
+    color: white;
+}
+
+.add_list_ip{
+    margin-left: 35px;
+    font-family: 'Alata', sans-serif;
+    font-weight: bold;
+    border-style: dotted;
+    width: 200px;
+}
+
+.add_list_btn{
+    background-color: #381DFC;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.10);
+    font-family: 'Crimson Text', serif;
+    color: white;
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: none;
+}
+
+
+/*-------------------------------------drag and drop----------------------------------------*/
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
+
+@media (max-width:991.98px) {
+    .padding {
+        padding: 1.5rem
+    }
+}
+
+@media (max-width:767.98px) {
+    .padding {
+        padding: 1rem
+    }
+}
+
+.padding {
+    padding: 10px;
+}
+
+.card {
+    background: #fff;
+    border-width: 0;
+    border-radius: .25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+    margin-bottom: 1.5rem
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(19, 24, 44, .125);
+    border-radius: .25rem
+}
+
+.list-item {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word
+}
+
+.list-item.block .media {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.list-item.block .list-content {
+    padding: 1rem
+}
+
+
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
+
+.text-color {
+    color: #5e676f
+}
+
+.text-sm {
+    font-size: .825rem
+}
+
+.h-1x {
+    height: 1.25rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical
+}
+
+.no-wrap {
+    white-space: nowrap
+}
+
+.list-row .list-item {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .75rem .625rem
+}
+
+.list-item {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #E1EA35;
+}
+
+.list-row .list-item>* {
+    padding-left: .625rem;
+    padding-right: .625rem
+}
+
+.dropdown {
+    position: relative
+}
+
+a:focus,
+a:hover {
+    text-decoration: none
+}
+
+
+
+/*-------------------------------------footer----------------------------------------*/
+footer {
+    background-color: #381DFC;
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+    position:fixed;
+    bottom: 0;
+}
+
+
+/*-------------------------------------media query----------------------------------------*/
+@media (max-width:800px){
+    /*Hamburger Menu*/
+    #menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home_link{
+        justify-content: flex-end;
+    }
+
+    #toggle{
+        visibility: visible;
+    }
+
+    #logo{
+        margin-bottom: 20px;
+    }
+
+    a{
+        text-decoration:none;
+        color: #44ABF8;
+        transition:#44ABF8 0.3s ease ;
+        margin-left: 10px;
+    }
+
+    a:hover {
+        color: #E1EA35;
+    }
+
+    #menutoggle{
+        display:block;
+        position: relative;
+        top: 30px;
+        left: 40px;
+        z-index: 1;
+    }
+
+    #menutoggle input{
+        display: block;
+        width: 50px;
+        height:50px;
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    #menutoggle span{
+        display: block;
+        width: 32px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: #381DFC;
+        z-index: 1;
+        transform-origin: 1px -2px;
+    }
+
+    #menutoggle span:first-child{
+        transform-origin: 0% 0% ;
+    }
+
+    #menutoggle span:nth-last-child(2){
+        transform-origin: 0% 100% ;
+    }
+
+    #menutoggle input:checked ~ span{
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background-color: #381DFC;
+    }
+
+    #menutoggle input:checked ~ span:nth-last-child(3){
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menutoggle input:checked ~span:nth-last-child(2){
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    #menu{
+        position: absolute;
+        width: 250px;
+        height: 100vh;
+        margin: -100px 0 0 -60px;
+        padding-top: 160px ;
+        list-style: none;
+        background-color:white;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0%);
+        transition: transform 0.5s;
+    }
+
+    menu, li{
+        position: relative;
+        padding: 10px 0;
+        font-size: 30px;
+        display: block;
+    }
+
+    #menutoggle input:checked ~ ul{
+        transform: translate(0,0)
+    }
+
+    .current_board {
+       margin-top: 50px;
+    }
+
+}
+
+
+
+/*--------------------------------------modal--------------------------------------*/
+
+
+#save_edit{
+    background-color: #E1EA35;
+    width: 50%;
+}
+
+.modalpop {
+    position: fixed;
+    padding: 10px;
+    width: 300px;
+    border-radius: 0.5em;
+    /*position of modal on screen*/
+    top: 50%;
+    left: 50%;
+    color: #000;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,1);
+    /*this is to make modal window disappear when clicking x /Visibility -Transition */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s, visibility 0s linear .5s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#name {
+    width: 60%;
+    margin: 10px 0px;
+}
+
+.modalpop:target {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.modalpop .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    color: #381DFC;
+    transition: color .3s;
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.modalpop .close:hover {
+    color: #44ABF8;
+}
+
+.closepop {
+    background-color: rgba(0,0,0,.8);
+    cursor: default;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility 0s linear .5s;
+}
+.modalpop:target + .closepop {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
